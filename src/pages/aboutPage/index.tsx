@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-function AboutPage({}: Props) {
+function AboutPage() {
   return <div>AboutPage</div>;
 }
 

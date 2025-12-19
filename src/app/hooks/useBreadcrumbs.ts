@@ -19,4 +19,3 @@ export function useBreadcrumbs(map?: Record<string, string>) {
     }),
   ];
 }
-

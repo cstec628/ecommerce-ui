@@ -41,6 +41,9 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  /* colors page */
+  --color-main: #07adb1;
+  --color-text: #cccccc
 }
 
 :root {
@@ -112,26 +115,25 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
 
-html {
-  font-size: 10px;
-}
-
 
 
 
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1200px;
   padding: 0 1.5rem;
   margin: 0 auto;
 }
