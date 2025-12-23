@@ -1,14 +1,26 @@
 import Link from "next/link";
-import { getProductCategories } from "@/services/product.service";
 import { NavigationMenuContent } from "@/components/ui/navigation-menu";
+import { useProductCategories } from "@/pages/productPage/hooks/useProductCategories";
+import { Skeleton } from "../ui/skeleton";
 
-export async function ProductMenu() {
-  const categories = await getProductCategories();
+export function ProductMenu() {
+  const { data, isLoading } = useProductCategories();
 
+  if (isLoading) {
+    return (
+      <NavigationMenuContent>
+        <div className="grid w-[200px] gap-4">
+          <Skeleton className="h-4 w-full rounded-full" />
+          <Skeleton className="h-4 w-full rounded-full" />
+          <Skeleton className="h-4 w-full rounded-full" />
+        </div>
+      </NavigationMenuContent>
+    );
+  }
   return (
     <NavigationMenuContent>
       <div className="grid w-[200px] gap-4">
-        {categories.map((cat) => (
+        {data?.map((cat) => (
           <Link
             key={cat.id}
             href={`/products/${cat.slug}`}

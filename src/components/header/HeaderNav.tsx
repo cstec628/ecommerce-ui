@@ -21,7 +21,14 @@ export function HeaderNav() {
           if (item.label === "Products") {
             return (
               <NavigationMenuItem key={item.label}>
-                <NavigationMenuTrigger>{item.label}</NavigationMenuTrigger>
+                <NavigationMenuTrigger
+                  className={cn(
+                    "flex items-center cursor-pointer uppercase text-base font-medium duration-300 md:hover:text-[var(--color-main2)]",
+                    pathName === item.href && "active text-[var(--color-main2)]"
+                  )}
+                >
+                  {item.label}
+                </NavigationMenuTrigger>
                 <ProductMenu />
               </NavigationMenuItem>
             );
