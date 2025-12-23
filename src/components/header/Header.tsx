@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { HeaderNav } from "./HeaderNav";
 
 function Header() {
   return (
-    <header className="bg-main">
+    <header>
       <div className="container">
-        <div className="flex items-center">
+        <div className="flex items-center justify-between p-4">
           {/* logo */}
           <h1>
             <Link href="/">
@@ -17,6 +18,7 @@ function Header() {
               />
             </Link>
           </h1>
+          <HeaderNav />
         </div>
       </div>
     </header>
