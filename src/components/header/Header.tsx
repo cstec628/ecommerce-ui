@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HeaderNav } from "./HeaderNav";
+import Head from "next/head";
+import { HeaderMobile } from "./HeaderMobile";
 
 function Header() {
   return (
@@ -19,6 +21,7 @@ function Header() {
             </Link>
           </h1>
           <HeaderNav />
+          <HeaderMobile />
         </div>
       </div>
     </header>

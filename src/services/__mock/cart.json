@@ -1,0 +1,40 @@
+{
+  "id": "cart_001",
+  "userId": "user_123",
+  "items": [
+    {
+      "id": "item_001",
+      "productId": "p_iphone_15",
+      "slug": "iphone-15-pro",
+      "name": "iPhone 15 Pro",
+      "category": "phones",
+      "image": "/images/products/iphone-15-pro.png",
+      "price": 29990000,
+      "quantity": 1,
+      "variant": {
+        "color": "Titanium",
+        "storage": "256GB"
+      }
+    },
+    {
+      "id": "item_002",
+      "productId": "p_airpods_pro",
+      "slug": "airpods-pro-2",
+      "name": "AirPods Pro 2",
+      "category": "accessories",
+      "image": "/images/products/airpods-pro-2.png",
+      "price": 5990000,
+      "quantity": 2
+    }
+  ],
+  "summary": {
+    "totalItems": 3,
+    "subTotal": 41970000,
+    "discount": 2000000,
+    "shippingFee": 0,
+    "tax": 0,
+    "total": 39970000
+  },
+  "currency": "VND",
+  "updatedAt": "2025-12-23T09:30:00Z"
+}

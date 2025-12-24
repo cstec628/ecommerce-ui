@@ -8,6 +8,11 @@ export const productService = {
     // console.log(res.data);
     // return res.data;
 
-    return MOCK_PRODUCT_CATEGORIES
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(MOCK_PRODUCT_CATEGORIES);
+      }, 500);
+    });
+
   },
 };
