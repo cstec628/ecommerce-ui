@@ -1,5 +1,5 @@
-import cart from "./__mock/cart.json";
-import { Cart } from "@/types/cart";
+import cart from "./cart.json";
+import { Cart } from "@/components/header/cart/types/cart";
 
 export const cartService = {
   getCart: async (): Promise<Cart> => {
@@ -7,7 +7,7 @@ export const cartService = {
     // console.log(res.data);
     // return res.data;
     return new Promise((resolve) => {
-      setTimeout(() => resolve(cart as Cart), 500);
+      setTimeout(() => resolve(cart as Cart), 50000);
     });
   },
 };
