@@ -7,7 +7,7 @@ export const cartService = {
     // console.log(res.data);
     // return res.data;
     return new Promise((resolve) => {
-      setTimeout(() => resolve(cart as Cart), 50000);
+      setTimeout(() => resolve(cart as Cart), 500);
     });
   },
 };

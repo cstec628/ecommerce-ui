@@ -1,11 +1,10 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { HeaderNav } from "./HeaderNav";
-import Head from "next/head";
-import { HeaderMobile } from "./HeaderMobile";
 import React from "react";
 import HeaderActions from "./HeaderActions";
+import { HeaderMobile } from "./HeaderMobile";
+import { HeaderNav } from "./HeaderNav";
 
 function Header() {
   const [token, setToken] = React.useState<string | null>(null);
@@ -18,7 +17,7 @@ function Header() {
   return (
     <header>
       <div className="container">
-        <div className="flex items-center justify-between p-4">
+        <div className="flex items-center justify-between py-4">
           {/* logo */}
           <h1>
             <Link href="/">
