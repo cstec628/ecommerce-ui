@@ -1,6 +1,6 @@
 import { Link, User } from "lucide-react";
 import { Button } from "../ui/button";
-import CartBadge from "./cart/CartBadge";
+import CartBadge from "../cart/CartBadge";
 
 function HeaderActions() {
   return (

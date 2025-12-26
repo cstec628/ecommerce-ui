@@ -2,7 +2,7 @@
 
 import React from "react";
 import clsx from "clsx";
-import { useBreadcrumbs } from "@/app/hooks/useBreadcrumbs";
+import { useBreadcrumbs } from "@/hooks/useBreadcrumbs";
 import { DynamicBreadcrumb } from "../breadcrumb/DynamicBreadcrumb";
 
 type PageProps = {

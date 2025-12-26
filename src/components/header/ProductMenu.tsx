@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { NavigationMenuContent } from "@/components/ui/navigation-menu";
-import { useProductCategories } from "@/app/hooks/useProductCategories";
+import { useProductCategories } from "@/hooks/useProductCategories";
 import { Skeleton } from "../ui/skeleton";
 
 export function ProductMenu() {

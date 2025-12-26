@@ -1,4 +1,4 @@
-export type CartItem = {
+export type CartItemType = {
   id: string;
   productId: string;
   slug: string;
@@ -22,7 +22,7 @@ export type CartSummary = {
 export type Cart = {
   id: string;
   userId?: string;
-  items: CartItem[];
+  items: CartItemType[];
   summary: CartSummary;
   currency: "VND";
   updatedAt: string;
