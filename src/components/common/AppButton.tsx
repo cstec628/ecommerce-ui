@@ -43,15 +43,14 @@ const buttonVariants = cva(
       size: "md",
       iconOnly: false,
     },
-  },
+  }
 );
 
 /* --------------------------------------------
  * PROPS
  * -------------------------------------------- */
 export interface AppButtonProps
-  extends
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   /** Render as link / tel / mail */
   href?: string;

@@ -1,19 +1,20 @@
-import { Link, User } from "lucide-react";
-import { Button } from "../ui/button";
-import CartBadge from "../cart/CartBadge";
+import { Phone } from "lucide-react";
+import { AppButton } from "../common/AppButton";
+import { Typography } from "../typography/Typography";
 
 function HeaderActions() {
   return (
-    <div className="flex items-center gap-2">
-      {/* Cart */}
-      <CartBadge />
-
-      {/* Login */}
-      <Button variant="ghost" size="icon" asChild>
-        <Link href="/login" aria-label="Login">
-          <User className="h-5 w-5" />
-        </Link>
-      </Button>
+    <div className="hidden md:flex items-center gap-2">
+      <AppButton
+        variant="primary"
+        size="lg"
+        className="mr-4"
+        leftIcon={<Phone className="w-4 h-4" />}
+      >
+        <Typography className="text-white font-bold" as="span" variant="body">
+          012 345 67 89
+        </Typography>
+      </AppButton>
     </div>
   );
 }

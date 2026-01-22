@@ -19,37 +19,21 @@ export function HeaderNav() {
       <NavigationMenu className="hidden md:flex items-center">
         <NavigationMenuList className="flex items-center gap-8">
           {HEADER_NAV.map((item) => {
-            if (item.label === "Products") {
+            if (!item.hide) {
               return (
-                <NavigationMenuItem key={item.label}>
-                  <NavigationMenuTrigger
+                <NavigationMenuItem key={item.label} className="leading-none">
+                  <Link
+                    href={item.href}
                     className={cn(
-                      "flex items-center cursor-pointer uppercase text-base font-medium duration-300 md:hover:text-[var(--color-main2)]",
-                      pathName === item.href &&
-                        "active text-[var(--color-main2)]",
+                      "text-base md:text-h5 font-bold transition-opacity duration-200 hover:text-main-800 hover:underline hover:underline-offset-4",
+                      pathName === item.href && "active"
                     )}
                   >
                     {item.label}
-                  </NavigationMenuTrigger>
-                  <ProductMenu />
+                  </Link>
                 </NavigationMenuItem>
               );
             }
-
-            return (
-              <NavigationMenuItem key={item.label} className="leading-none">
-                <Link
-                  href={item.href}
-                  className={cn(
-                    "uppercase text-base font-medium duration-300 md:hover:text-[var(--color-main2)]",
-                    pathName === item.href &&
-                      "active text-[var(--color-main2)]",
-                  )}
-                >
-                  {item.label}
-                </Link>
-              </NavigationMenuItem>
-            );
           })}
         </NavigationMenuList>
       </NavigationMenu>

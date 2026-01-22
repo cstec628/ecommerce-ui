@@ -38,7 +38,7 @@ const variantStyles: Record<Variant, string> = {
   h2: "text-h3 md:text-h2",
   h3: "text-h4 md:text-h3",
   h4: "text-h5 md:text-h4",
-  h5: "text-lg md:text-xl",
+  h5: "text-base md:text-h5",
   h6: "text-base md:text-lg",
 
   body: "text-base",
@@ -102,7 +102,7 @@ export function Typography({
         weight && weightMap[weight],
         alignMap[align],
         "tracking-tight",
-        className,
+        className
       )}
     >
       {children}

@@ -1,19 +1,11 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import HeaderActions from "./HeaderActions";
 import { HeaderMobile } from "./HeaderMobile";
 import { HeaderNav } from "./HeaderNav";
 
 function Header() {
-  const [token, setToken] = React.useState<string | null>(null);
-
-  React.useEffect(() => {
-    const storedToken = localStorage.getItem("User");
-    setToken(storedToken);
-  }, []);
-
   return (
     <header>
       <div className="container">
@@ -30,7 +22,7 @@ function Header() {
             </Link>
           </h1>
           <HeaderNav />
-          {/* <HeaderActions /> */}
+          <HeaderActions />
           <HeaderMobile />
         </div>
       </div>
