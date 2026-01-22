@@ -22,15 +22,15 @@ function Header() {
           <h1>
             <Link href="/">
               <Image
-                src="/logo.png"
+                src="/logo.svg"
                 alt="Cultivation"
-                width={150}
-                height={100}
+                width={172}
+                height={40}
               />
             </Link>
           </h1>
-          <HeaderNav user={token} />
-          <HeaderActions />
+          <HeaderNav />
+          {/* <HeaderActions /> */}
           <HeaderMobile />
         </div>
       </div>

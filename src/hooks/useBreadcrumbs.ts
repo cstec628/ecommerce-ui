@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 export function useBreadcrumbs(map?: Record<string, string>) {
   const pathname = usePathname() || "/";
   const segments = pathname.split("/").filter(Boolean);
-
   return [
     { label: "Home", href: "/" },
     ...segments.map((seg, index) => {

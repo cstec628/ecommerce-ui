@@ -12,10 +12,7 @@ import { ProductMenu } from "./ProductMenu";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-type HeaderNavProps = {
-  user?: string | null;
-};
-export function HeaderNav({ user }: HeaderNavProps) {
+export function HeaderNav() {
   const pathName = usePathname();
   return (
     <>
@@ -29,7 +26,7 @@ export function HeaderNav({ user }: HeaderNavProps) {
                     className={cn(
                       "flex items-center cursor-pointer uppercase text-base font-medium duration-300 md:hover:text-[var(--color-main2)]",
                       pathName === item.href &&
-                        "active text-[var(--color-main2)]"
+                        "active text-[var(--color-main2)]",
                     )}
                   >
                     {item.label}
@@ -45,7 +42,8 @@ export function HeaderNav({ user }: HeaderNavProps) {
                   href={item.href}
                   className={cn(
                     "uppercase text-base font-medium duration-300 md:hover:text-[var(--color-main2)]",
-                    pathName === item.href && "active text-[var(--color-main2)]"
+                    pathName === item.href &&
+                      "active text-[var(--color-main2)]",
                   )}
                 >
                   {item.label}

@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Wix_Madefor_Text } from "next/font/google";
 import Header from "@/components/header/Header";
 import "./globals.css";
 import { ReactQueryProvider } from "@/providers/ReactQueryProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const WixSans = Wix_Madefor_Text({
+  variable: "--font-wix",
+  subsets: ["vietnamese"],
 });
 
 export const metadata: Metadata = {
@@ -26,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${WixSans.variable} antialiased`}>
         <ReactQueryProvider>
           <Header />
           {children}

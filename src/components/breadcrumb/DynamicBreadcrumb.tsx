@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import { HomeIcon } from "lucide-react";
 import { Fragment } from "react/jsx-runtime";
+import { HEADER_NAV } from "@/config/header-nav";
 
 export type Crumb = {
   label: string;
@@ -24,6 +25,7 @@ type BreadcrumbProps = {
 };
 
 export function DynamicBreadcrumb({ items, className }: BreadcrumbProps) {
+  console.log(items);
   return (
     <Breadcrumb className={clsx(className)}>
       <BreadcrumbList>
@@ -43,9 +45,15 @@ export function DynamicBreadcrumb({ items, className }: BreadcrumbProps) {
                   </BreadcrumbLink>
                 </BreadcrumbItem>
               ) : isLast ? (
-                <BreadcrumbPage>{item.label}</BreadcrumbPage>
+                <BreadcrumbPage>
+                  {HEADER_NAV.filter((nav) => nav.href === item.href)[0]
+                    ?.label || item.label}
+                </BreadcrumbPage>
               ) : (
-                <BreadcrumbLink href={item.href}>{item.label}</BreadcrumbLink>
+                <BreadcrumbLink href={item.href}>
+                  {HEADER_NAV.filter((nav) => nav.href === item.href)[0]
+                    ?.label || item.label}
+                </BreadcrumbLink>
               )}
 
               {!isLast && <BreadcrumbSeparator />}
