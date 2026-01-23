@@ -47,7 +47,7 @@ module.exports = {
         caption: ["12px", "16px"],
       },
       fontFamily: {
-        sans: ["var(--font-wix)", "system-ui", "-apple-system", "sans-serif"],
+        sans: ["var(--font-wix)", "system-ui", "sans-serif"],
       },
     },
   },
