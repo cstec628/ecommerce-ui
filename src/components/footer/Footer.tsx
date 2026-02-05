@@ -32,7 +32,7 @@ function Footer({}: Props) {
               {HEADER_NAV.map((item) => {
                 if (!item.hide) {
                   return (
-                    <li>
+                    <li key={item.href}>
                       <Link href={item.href} className="hover:underline">
                         {item.label}
                       </Link>

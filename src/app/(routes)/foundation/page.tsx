@@ -3,8 +3,33 @@ import { DynamicPage } from "@/components/dynamicPage/DynamicPage";
 import { Container } from "@/components/grids/container/container";
 import { Typography } from "@/components/typography/Typography";
 import { MoveRight, Phone } from "lucide-react";
+import { DynamicForm } from "@/components/form/DynamicForm";
+import { FieldConfig } from "@/types/form";
 
 function page() {
+  const fields: FieldConfig[] = [
+    {
+      name: "email",
+      label: "Email",
+      type: "email",
+      required: true,
+    },
+    {
+      name: "password",
+      label: "Password",
+      type: "password",
+      required: true,
+    },
+    {
+      name: "role",
+      label: "Role",
+      type: "select",
+      options: [
+        { label: "Admin", value: "admin" },
+        { label: "User", value: "user" },
+      ],
+    },
+  ];
   return (
     <DynamicPage>
       <Container>
@@ -146,6 +171,15 @@ function page() {
             </Typography>
           </AppButton>
         </div>
+      </Container>
+
+      <Container>
+        <DynamicForm
+          fields={fields}
+          onSubmit={(data) => {
+            console.log("FORM DATA:", data);
+          }}
+        />
       </Container>
     </DynamicPage>
   );
